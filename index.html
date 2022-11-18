@@ -21,9 +21,84 @@
                     <p>Descreva as caracteristicas do seu veículo e marque todos os opcionais que ele possui.</p>
                     <form action="form.php">
                         <div class="box-input">
-                            <label>Título do Anúncio:</label>
-                            <input type="text">
+                            <label for="title">Título do Anúncio:
+                                <span class="required-field">*</span>
+                            </label>
+                            <input type="text" name="title" id="title" class="block"
+                                placeholder="Defina um título para seu veículo"
+                                minlength="1" maxlength="30" required>
+                            <input type="submit" class="btn-submit" value="Cadastrar">
                         </div>
+                        <div class="box-input">
+                            <label for="price">Preço do veículo
+                                 <span class="required-field">*</span></label>
+                                 <input type="number" id="price" name="price" class="block" required>
+                        </div>
+                        <div class="box-input">
+                            <label for="description">Descrição:
+                                <span class="required-field">*</span>
+                            </label>
+                            <textarea name="description"
+                                 id="description" 
+                                 class="block"
+                                 cols="30" 
+                                 rows="10"
+                                 required
+                                 placeholder="Descreva seu veículo."
+                                 ></textarea>
+                        </div>
+                        <div class="box-input">
+                            <label for="unique_owner">Único dono?
+                                <span class="required-field">*</span>
+                            </label>
+                            <select id="unique_owner" name="unique_owner" required>
+                                <option value="">Selecione..</option>
+                                <option value="1">Sim</option>
+                                <option value="0">Não</option>
+                            </select>
+                        </div>
+                        <div class="box-input">
+                            <label for="brand">
+                                Marca:
+                                <span class="required-field">*</span>
+                            </label>
+                            <input type="text" name="brand" id="brand" class="block"
+                                placeholder="Digite a marca do seu veículo" required>
+                        </div>
+                        <div class="box-input">
+                            <label for="model">
+                                Modelo:
+                                <span class="required-field">*</span>
+                            </label>
+                            <input type="text" name="model" id="model" class="block"
+                            placeholder="Digite o modelo do seu veículo" required>
+                        </div>
+                        <div class="box-input">
+                            <label for="mileage">
+                                Quilometragem:
+                                <span class="required-field">*</span>
+                            </label>
+                            <input type="text" name="mileage" id="mileage" class="block" required>
+                        </div>
+                        <div class="box-input">
+                            <label for="purchase-date">
+                                Data de compra do veículo:
+                                <span class="required-field">*</span>
+                            </label>
+                            <input type="date" 
+                            name="mileage"
+                             id="purchase-date"
+                              class="block" 
+                              required>
+                        </div>
+                        <div class="box-input">
+                            <p>Câmbio:<span class="required-field">*</span></p>
+                            <input type="radio" id="manual" name="gear">
+                            <label for="manual">Manual</label>
+                            <input type="radio" id="auto" name="gear">
+                            <label for="auto">Automático</label>
+                        </div>
+                        <input type="submit" class="btn-submit" value="Cadastrar">
                     </form>
                 </div>
             </div>
